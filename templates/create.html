@@ -1,0 +1,39 @@
+{%extends "base.html"%}
+
+{% block title %} 
+Create a Bracket
+{% endblock %}
+
+{% block h1 %}
+Kanye Madness- Create Your Bracket!
+{% endblock %}
+
+{% block content1 %}
+<br>
+<h3> North West </h3>
+<form action="" method = 'POST'>
+    <h4>Choice1</h4>
+    <input type="radio" name="choice1" value="Stronger" checked> Stronger<br>
+    <input type="radio" name="choice1" value="Four Five Second"> Four Five Second<br>
+    <h4>Choice2</h4>
+    <input type="radio" name="choice2" value="Can't Tell Me Nothing" checked> Can't Tell me Nothing<br>
+    <input type="radio" name="choice2" value="Amazing"> Amazing<br>
+    <br>
+    <h4>Choice3</h4>
+    <input type="radio" name="choice3" value="Runawawy" checked> Runaway<br>
+    <input type="radio" name="choice3" value="Through the Wire"> Through the Wire<br>
+    <h4>Choice4</h4>
+    <input type="radio" name="choice4" value="Famous" checked> Famous<br>
+    <input type="radio" name="choice4" value="Monster"> Monster<br>
+    <br>
+    <input type = "submit" value = "submit">
+</form>
+
+{% endblock %}
+
+{% block content2 %}
+{{ choice1 }}<br>
+{{ choice2 }}<br>
+{{ choice3 }}<br>
+{{ choice4 }}<br>
+{% endblock %}

@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+
+{% block title %} 
+Kanye Madness v1!
+{% endblock %}
+
+{% block h1 %}
+What is Kanye Madness?
+{% endblock %}
+
+{% block content1 %}
+Basically its March Madness, except with Kanye West songs as the teams. You can make your own bracket. 
+<p>
+</p>
+<img src = "{{ url_for('static', filename='img/kanyepicture.jpg') }}" width="300" height="300" alt = "Kanye Picutre">
+{% endblock %}

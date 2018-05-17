@@ -1,0 +1,39 @@
+{%extends "base.html"%}
+
+{% block title %} 
+Create a Bracket
+{% endblock %}
+
+{% block h1 %}
+Login Page
+{% endblock %}
+
+{% block content1 %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <h3></h3>
+
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+{{ form.csrf_token }}
+{% from "_formhelpers.html" import render_field %}
+<form method='post' action = "">
+    {{ form.hidden_tag() }}
+    {{ render_field(form.username) }}
+    {{ render_field(form.password) }}
+    {{ render_field(form.remember) }}
+  <input type = "submit" value = "login">
+</form>
+
+<br>
+<p>Don't have an account? <a href = "{{url_for('register')}}"> Register</a> </p>
+
+{% endblock %}
+
+{% block content2 %}
+{% endblock %}
